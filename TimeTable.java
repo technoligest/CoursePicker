@@ -1,5 +1,11 @@
 import java.util.EmptyStackException;
 import java.util.HashMap;
+
+
+/*
+ *TimeTable basically keeps track of all the available courses in the university
+ *
+ */
 public class TimeTable {
 	HashMap <String,Course>courses;
 	TimeTable(){
@@ -15,10 +21,8 @@ public class TimeTable {
                 co.getSections().add(s);
             }
 		}
-		else
-			throw new EmptyStackException();
 	}
 	public Course getCourse(String id){
-		return courses.get(id);
+	    return courses.get(id);
 	}
 }

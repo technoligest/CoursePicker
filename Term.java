@@ -1,3 +1,4 @@
+import java.text.ParseException;
 import java.util.ArrayList;
 
 /**
@@ -5,13 +6,15 @@ import java.util.ArrayList;
  */
 public class Term {
     private int year;
-    private String id;
+    private String id; //YYYYBB, BB=10=fall, BB=20=winter, BB=30=summer
     private ArrayList<CourseRecord> courseRecords;
-    public Term(String id, int year){
-        this.id=id;
-        this.year=year;
+
+    public Term(String id, int year) {
+        this.id = id;
+        this.year = year;
     }
-    public ArrayList<CourseRecord> getCourseRecords(){
+
+    public ArrayList<CourseRecord> getCourseRecords() {
         return courseRecords;
     }
 
@@ -30,4 +33,20 @@ public class Term {
     public void setId(String id) {
         this.id = id;
     }
+
+    public boolean canAdd(Section section) {
+        try {
+            for (CourseRecord record : courseRecords) {
+                if (!(Integer.parseInt(record.getSection().getBeginTime()) > Integer.parseInt(section.getEndTime()) ||
+                        Integer.parseInt(record.getSection().getEndTime()) < Integer.parseInt(section.getBeginTime())
+                )) {
+                    return false;
+                }
+            }
+        } catch (Exception e) {
+            System.out.println();
+        }
+        return true;
+    }
+
 }

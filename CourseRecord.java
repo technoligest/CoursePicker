@@ -5,9 +5,13 @@ public class CourseRecord {
     String termId;
     String courseId;
     String grade;
-    public CourseRecord(String courseId){
-        this.courseId=courseId;
+    Section section;
+
+    public CourseRecord(String courseId, Section section) {
+        this.courseId = courseId;
+        this.section = section;
     }
+
     public String getTermId() {
         return termId;
     }
@@ -32,4 +36,11 @@ public class CourseRecord {
         this.grade = grade;
     }
 
+    public Section getSection() {
+        return section;
+    }
+
+    public void setSection(Section section) {
+        this.section = section;
+    }
 }
