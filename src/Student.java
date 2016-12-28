@@ -141,7 +141,7 @@ public class Student {
 
     //Here we need to figure out the untaken courses.
     private void calcUntakenRequiredCourses() {
-        
+
         untakenRequiredCourses.addAll(university.getDegrees().get(programId).getMandatory());
     }
 
