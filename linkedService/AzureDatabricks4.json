@@ -1,0 +1,17 @@
+{
+	"name": "AzureDatabricks4",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://centralus.azuredatabricks.net",
+			"newClusterNodeType": "Standard_D8_v3",
+			"newClusterNumOfWorker": "1",
+			"newClusterSparkEnvVars": {
+				"python": "python3"
+			},
+			"newClusterVersion": "4.2.x-scala2.11",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIllBU0VSREFUQUZBQ1RPUlkwXzU0ODk3ZDE3LThlYjYtNGZhZS1hNWRmLWZkZGVhM2NiNTNkYiINCn0="
+		}
+	}
+}

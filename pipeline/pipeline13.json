@@ -1,0 +1,18 @@
+{
+	"name": "pipeline13",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			}
+		],
+		"folder": {
+			"name": "gsfdg"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
