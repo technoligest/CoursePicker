@@ -8,6 +8,12 @@
 					"referenceName": "pipeline_1",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "1b29d5f5-cb28-4a09-94e6-dca0dd345818",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
