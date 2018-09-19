@@ -1,0 +1,23 @@
+{
+	"name": "trigger5",
+	"properties": {
+		"runtimeState": "Started",
+		"pipeline": {
+			"pipelineReference": {
+				"referenceName": "1b29d5f5-cb28-4a09-94e6-dca0dd345818",
+				"type": "PipelineReference"
+			}
+		},
+		"type": "TumblingWindowTrigger",
+		"typeProperties": {
+			"frequency": "Minute",
+			"interval": 15,
+			"startTime": "2018-09-19T00:36:22.952Z",
+			"delay": "00:00:00",
+			"maxConcurrency": 50,
+			"retryPolicy": {
+				"intervalInSeconds": 30
+			}
+		}
+	}
+}
